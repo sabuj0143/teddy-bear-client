@@ -45,12 +45,12 @@ const router = createBrowserRouter([
       {
         path: '/updateToy/:id',
         element: <UpdateToy></UpdateToy>,
-        loader: ({params}) => fetch(`https://assignment-11-teddy-bear-server.vercel.app/${params.id}`)
+        loader: ({ params }) => fetch(`https://assignment-11-teddy-bear-server.vercel.app/${params.id}`)
       },
       {
         path: '/viewDetailsTeddy/:id',
-        element:<PrivateRoute><ViewDetailsTeddy></ViewDetailsTeddy></PrivateRoute>,
-        loader: ({params}) => fetch(`https://assignment-11-teddy-bear-server.vercel.app/viewDetailsTeddy/${params.id}`)
+        element: <PrivateRoute><ViewDetailsTeddy></ViewDetailsTeddy></PrivateRoute>,
+        loader: ({ params }) => fetch(`https://assignment-11-teddy-bear-server.vercel.app/viewDetailsTeddy/${params.id}`)
       },
       {
         path: '/blogs',
@@ -71,7 +71,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AuthProvider>
-      <RouterProvider router={router} />
+      <div className="max-w-screen-xl	mx-auto">
+        <RouterProvider router={router} />
+      </div>
     </AuthProvider>
   </React.StrictMode>,
 )

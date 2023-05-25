@@ -18,7 +18,7 @@ const Category = () => {
     const tap3 = teddys.filter(teddy => teddy.subCategory === 'Brigade');
 
     return (
-        <div className='my-10 shadow-xl rounded-lg p-4 bg-gray-200'>
+        <div className='my-80 md:my-10 shadow-xl rounded-lg p-4 bg-gray-200'>
             <div className='text-center text-5xl font-semibold my-4'>
                 <h4>Shop By Category</h4>
                 <hr className='my-4 text-red-500' />
